@@ -9,6 +9,11 @@ class Price extends Model
     protected $fillable = [
       "price", "currency"
     ];
+
+    public function getCreatedAtAttribute($value)
+    {
+        return date('jM H:i:s ',strtotime($value));
+    }
   
     public function product()
     {
