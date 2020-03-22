@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 
 /**
- * Runs the scheduler every minute as expected to be done by cron.
+ * Runs the scheduler every hour as expected to be done by cron.
  */
 class SchedulerDaemon extends Command
 {
@@ -14,14 +14,14 @@ class SchedulerDaemon extends Command
    *
    * @var string
    */
-  protected $signature = 'schedule:daemon {--sleep=60}';
+  protected $signature = 'schedule:daemon {--sleep=3600}';
 
   /**
    * The console command description.
    *
    * @var string
    */
-  protected $description = 'Call the scheduler every minute.';
+  protected $description = 'Call the scheduler every hour.';
 
   /**
    * Execute the console command.
